@@ -132,8 +132,8 @@
 
       function calculateTotalTicket(){
        
-        const firstClassTicketCount = getTicketValue('firstClassTicket-count')
-        const economyClassTicketCount = getTicketValue('economyClassTicket-count');
+        const firstClassTicketCount = getTicketValue('firstClassTicket')
+        const economyClassTicketCount = getTicketValue('economicClassTicket');
 
         const totalTicketPrice = firstClassTicketCount * 150 + economyClassTicketCount * 100;
         document.getElementById('totalTicket-price').innerText = '$' + totalTicketPrice;
