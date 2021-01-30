@@ -106,7 +106,7 @@
 
 <script>
         function handleAirTicketing(airTicket, isPlus) {
-        const ticketInput = document.getElementById(airTicket + '-count');
+        // const ticketInput = getTicketValue(airTicket);
         const ticketCount = getTicketValue(airTicket);
 
         let ticketNewCount = ticketCount;
@@ -116,8 +116,8 @@
         if (isPlus == false && ticketCount > 0) {
           ticketNewCount = ticketCount - 1;
         }
-        ticketInput.value = ticketNewCount;
-        // const TicketTotal = ticketNewCount * 100;
+
+        document.getElementById(airTicket + '-count').value = ticketNewCount;
         let ticketTotal = 0;
         if(airTicket =='firstClassTicket'){
             ticketTotal = ticketNewCount * 150;
